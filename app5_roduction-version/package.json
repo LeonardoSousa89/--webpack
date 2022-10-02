@@ -1,11 +1,11 @@
 {
   "name": "app",
   "version": "1.0.0",
-  "description": "Program to introduce a webpack build",
+  "description": "Randomic Message",
   "main": "index.js",
   "scripts": {
     "serverup":"pm2 start ./dist/bundle.js --name app --watch",
-	"serverstop":"pm2 stop app",
+	  "serverstop":"pm2 stop app",
     "serverdown":"pm2 delete app"
   },
   "keywords": [],
@@ -18,5 +18,4 @@
     "pm2": "^5.2.0",
     "uuid": "^7.0.0"
 	}
-	
 }
