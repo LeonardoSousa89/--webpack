@@ -4,9 +4,13 @@
   "description": "Randomic Message",
   "main": "index.js",
   "scripts": {
-    "serverup":"pm2 start ./dist/bundle.js --name app --watch",
-	  "serverstop":"pm2 stop app",
-    "serverdown":"pm2 delete app"
+    "serverup": "pm2 start ./dist/bundle.js --name app --watch",
+    "serverstop": "pm2 stop app",
+    "serverdown": "pm2 delete app",
+    "servermonit":"pm2 monit",
+	  "servermonitor":"pm2 monitor",
+    "serverrestart":"pm2 restart app",
+    "serverls":"pm2 ls"
   },
   "keywords": [],
   "author": "Leonardo Sousa",
@@ -17,5 +21,5 @@
     "express": "^4.18.1",
     "pm2": "^5.2.0",
     "uuid": "^7.0.0"
-	}
+  }
 }
