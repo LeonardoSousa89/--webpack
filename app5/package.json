@@ -1,0 +1,36 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Program to introduce a webpack build",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node ./dist/bundle.js",
+    "server":"pm2 start ./dist/bundle.js --name app --watch",
+    "serverdown":"pm2 stop app",
+    "dev": "webpack && nodemon ./dist/bundle.js",
+    "build": "cross-env NODE_ENV=production webpack && npm run server"
+  },
+  "keywords": [],
+  "author": "Leonardo Sousa",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "pm2": "^5.2.0",
+    "uuid": "^7.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "cross-env": "^7.0.3",
+    "jest": "^29.1.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.20",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
