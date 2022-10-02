@@ -1,0 +1,21 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Program to introduce a webpack build",
+  "main": "index.js",
+  "scripts": {
+    "server":"pm2 start ./dist/bundle.js --name app --watch",
+    "serverdown":"pm2 stop app"
+  },
+  "keywords": [],
+  "author": "Leonardo Sousa",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "pm2": "^5.2.0",
+    "uuid": "^7.0.0"
+	}
+	
+}
